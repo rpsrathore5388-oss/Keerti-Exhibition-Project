@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keerti Karti Exhibition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="#">Keerti Karti</a>
+  <ul class="nav-links">
+    <li><a href="#highlights">Highlights</a></li>
+    <li><a href="#register">Register</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line top"></div>
+  <div class="hero-line bottom"></div>
+  <div class="hero-line left"></div>
+  <div class="hero-line right"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Jaipur &nbsp;•&nbsp; 27–29 March 2026</p>
+    <p class="hero-eyebrow hero-venue">📍 Bane Enclave, A-16, Disnau House, Shekhawat Marg, Ambabari, Jaipur</p>
+    <h1>Keerti<br><em>Karti</em><br>Exhibition</h1>
+    <p class="hero-sub">Fashion &nbsp;•&nbsp; Jewellery &nbsp;•&nbsp; Lifestyle</p>
+    <p class="hero-date">An exclusive curated showcase</p>
+
+    <div id="countdown">
+      <div class="cd-block"><span class="cd-num" id="cd-d">00</span><span class="cd-label">Days</span></div>
+      <div class="cd-block"><span class="cd-num" id="cd-h">00</span><span class="cd-label">Hours</span></div>
+      <div class="cd-block"><span class="cd-num" id="cd-m">00</span><span class="cd-label">Minutes</span></div>
+      <div class="cd-block"><span class="cd-num" id="cd-s">00</span><span class="cd-label">Seconds</span></div>
+    </div>
+
+    <button onclick="scrollToForm()" class="btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Reserve Your Spot
+    </button>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-hint-line"></div>
+  </div>
+</header>
+
+<section class="features" id="highlights">
+  <p class="section-eyebrow reveal">What Awaits You</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Exhibition <em>Highlights</em></h2>
+
+  <div class="cards">
+    <div class="card reveal">
+      <span class="card-icon">👗</span>
+      <div class="card-title">Designer Fashion</div>
+      <p class="card-desc">Discover timeless traditional wear featuring rich handwoven fabrics, intricate embroidery, and heritage craftsmanship that celebrate the elegance of cultural attire.</p>
+    </div>
+    <div class="card reveal" style="transition-delay:.12s">
+      <span class="card-icon">💎</span>
+      <div class="card-title">Fine Jewellery</div>
+      <p class="card-desc">Timeless pieces in gold, kundan, polki and precious stones heirloom jewellery meet modern design sensibility at every turn.</p>
+    </div>
+    <div class="card reveal" style="transition-delay:.24s">
+      <span class="card-icon">🏡</span>
+      <div class="card-title">Lifestyle Curations</div>
+      <p class="card-desc">Handpicked home decor, fragrances and artisan crafts that transform everyday living into a statement of refined taste.</p>
+    </div>
+  </div>
+</section>
+
+<section id="register" class="form-section">
+  <p class="section-eyebrow reveal">An Invitation to Exclusivity</p>
+  <div class="divider reveal"></div>
+  <h2 class="section-title reveal">Register <em>Now</em></h2>
+
+  <div class="form-box reveal">
+    <form id="formData" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="inp-name">Full Name</label>
+          <input id="inp-name" type="text" placeholder="Your Name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="inp-phone">Phone</label>
+          <input id="inp-phone" type="tel" placeholder="Contact No." required autocomplete="tel">
+        </div>
+      </div>
+      <div class="field">
+        <label for="inp-email">Email Address</label>
+        <input id="inp-email" type="email" placeholder="you@example.com" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="inp-msg">Message <span style="opacity:.4">(optional)</span></label>
+        <textarea id="inp-msg" placeholder="Any preferences or questions…"></textarea>
+      </div>
+      <div class="form-btn-wrap">
+        <button type="submit" class="btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Confirm Registration
+        </button>
+      </div>
+    </form>
+    <p id="status"></p>
+  </div>
+</section>
+
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup" id="popup">
+    <span class="popup-icon">🎉</span>
+    <h2>You're Registered!</h2>
+    <p>Welcome to the Keerti Karti Exhibition. We look forward to seeing you in Jaipur this March.</p>
+    <br>
+    <button class="btn" style="opacity:1;animation:none" onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Keerti Karti</span>
+  <span class="footer-copy">© 2026 Keerti Karti Exhibition, Jaipur. All rights reserved.</span>
+</footer>
+
+<script src="script.js">
+</script>
+</body>
+</html>
